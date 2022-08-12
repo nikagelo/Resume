@@ -432,31 +432,56 @@ h3 {
   justify-content: center;
   margin-bottom: 121px;
 }
-.client-example-wrapper {
-  width: 230px;
-  height: 190px;
-  border: 4px solid transparent;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .clients {
   display: flex;
   justify-content: center;
 }
-.client-example {
+.initial {
+  background-color: #131a36;
   width: 110px;
   height: 110px;
-  background-color: #15263e;
 }
-/* .client-example h4,
-.client-example span {
+.someContent {
+  flex-direction: column;
+  display: flex;
+  margin-left: 65px;
+  margin-bottom: 195px;
+}
+.someContent .hovered {
   display: none;
-} */
-
-.client-example:hover {
+}
+.someContent:hover .hovered {
   display: block;
-  background-color: transparent;
-  border: 4px red solid;
+}
+.someContent:hover .initial {
+  display: none;
+}
+
+.someContent:hover {
+  background: transparent;
+  border: 4px solid red;
+  overflow: hidden;
+  color: white;
+  width: 230px;
+  height: 190px;
+}
+.hovered-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto auto;
+}
+.hover-h5 {
+  font-size: 16px;
+  color: #161616;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+}
+.hover-span {
+  width: 164px;
+  font-size: 13px;
+  color: #626262;
+  margin-right: auto;
+  margin-left: auto;
 }
