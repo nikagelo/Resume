@@ -1,4 +1,4 @@
-///Slider Section Javascript
+//////////////////////////////////////////////////////////Slider Section Javascript
 let slideIndex = 0;
 showSlides();
 
@@ -16,7 +16,7 @@ function showSlides() {
 
   setTimeout(showSlides, 5000);
 }
-///More about me Section Javascript
+//////////////////////////////////////////////////////More about me Section Javascript
 htmlID = document.getElementById("htmlID");
 cssID = document.getElementById("cssID");
 responsiveID = document.getElementById("responsiveID");
@@ -37,7 +37,7 @@ let myScrollFunc = function () {
   }
 };
 window.addEventListener("scroll", myScrollFunc);
-//Latest projects
+////////////////////////////////////////////////////////////////Latest projects
 filterSelection("all");
 function filterSelection(element) {
   let projects, i;

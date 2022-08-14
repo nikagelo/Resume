@@ -137,7 +137,7 @@ h3 {
     width: 0px;
   }
   to {
-    width: 100%;
+    width: 90%;
   }
 }
 @keyframes fillJs {
@@ -484,4 +484,144 @@ h3 {
   color: #626262;
   margin-right: auto;
   margin-left: auto;
+}
+/* Contact Us Styles  */
+.contact-us {
+  height: 660px;
+  background-image: url(../images/map.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+.contact-us-wrapper {
+  width: 100%;
+  height: 660px;
+  background-color: #000000;
+  opacity: 71%;
+}
+.form-wrapper h2 {
+  font-size: 45px;
+  color: #ffffff;
+}
+
+.form-wrapper span {
+  font-size: 17px;
+  color: #eeeeee;
+}
+.form {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.textArea {
+  grid-column: 1 / span 3;
+}
+#name,
+#email,
+#website {
+  width: 290px;
+  height: 50px;
+  padding: 18px 170px 17px 30px;
+  font-size: 10px;
+}
+#message {
+  resize: none;
+  padding: 22px 0 73px 30px;
+  width: 890px;
+  height: 110px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+#message::placeholder {
+  font-size: 10px;
+  color: #515151;
+}
+.contactUsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contactUsWrapper h2 {
+  font-size: 45px;
+  margin-top: 152px;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+.contactUsWrapper span {
+  font-size: 17px;
+  margin-bottom: 46px;
+  color: #eeeeee;
+}
+.send {
+  display: flex;
+  justify-content: center;
+}
+.send button {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #e93656;
+  padding: 16px 46px 18px 46px;
+  background-color: transparent;
+  border: 2px solid #e93656;
+  transition-delay: 0.2s;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.send button:hover {
+  color: #dddddd;
+  background-color: #e93656;
+}
+
+/* Footer styles */
+.media {
+  height: 490px;
+  background-color: #282828;
+  justify-content: center;
+  flex-direction: column;
+}
+.mediaText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mediaText h2 {
+  font-size: 55px;
+  text-transform: capitalize;
+  color: #ffffff;
+  margin: 110px auto 32px;
+}
+.mediaText h2 span {
+  color: #e93656;
+  font-size: 55px;
+}
+.mediaText p {
+  width: 613px;
+  font-size: 17px;
+  color: #a5a5a5;
+  text-align: center;
+}
+.social {
+  margin-top: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social a {
+  margin-right: 10px;
+}
+.rights {
+  height: 82px;
+  background-color: #171717;
+}
+.rights p {
+  display: flex;
+  justify-content: center;
+  padding-top: 27px;
+  font-size: 15px;
+  color: #a0a8b7;
 }
