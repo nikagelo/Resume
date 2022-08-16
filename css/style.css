@@ -10,6 +10,14 @@
   width: 100%;
   margin: 0 auto;
 }
+.about {
+  font-size: 43px;
+  color: #373737;
+  font-family: "Poppins-extraBold";
+  position: absolute;
+  top: 6%;
+  right: 6%;
+}
 .mySlides {
   display: none;
 }
@@ -56,10 +64,35 @@
   margin-top: 40px;
   margin-left: 10px;
 }
+.satisfied {
+  position: absolute;
+  bottom: 10%;
+  right: 15%;
+  padding-bottom: 30px;
+}
+.percent {
+  font-size: 24px;
+  color: #e93656;
+  font-family: "Montserrat-Bold";
+}
+.percent span {
+  font-size: 24px;
+  color: #212121;
+  text-transform: capitalize;
+  font-family: "Montserrat-Bold";
+}
+.satisfied div {
+  width: 340px;
+  height: 6px;
+  background-color: #e93656;
+  border-radius: 30px;
+  position: absolute;
+  margin-top: 20px;
+}
+/* aboout me section */
 .aboutMeSection {
   justify-content: center;
   margin-top: 135px;
-  /* background-color: red; */
 }
 .aboutMe {
   display: flex;
@@ -292,6 +325,7 @@
 .recommendation-wrapper {
   height: 570px;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
   background-color: #000000;
@@ -338,16 +372,22 @@
 .change div {
   width: 13px;
   height: 13px;
-  border: 1px solid #ffffff;
+
   margin-bottom: 14px;
   margin-left: 153px;
+}
+.inactive-btn {
+  border: 1px solid #ffffff;
+}
+.none {
+  display: none;
 }
 .active-worker {
   display: flex;
   align-items: center;
 }
-.none {
-  display: none;
+.active-button {
+  background-color: #e93656;
 }
 
 /* Latest Projects Styles */
@@ -559,8 +599,8 @@
   display: flex;
   justify-content: center;
 }
+
 .initial {
-  background-color: #131a36;
   width: 110px;
   height: 110px;
 }

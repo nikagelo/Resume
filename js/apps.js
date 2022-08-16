@@ -47,6 +47,9 @@ let worker3 = document.querySelector(".worker3");
 
 function showFirst() {
   console.log("1");
+  firstbtn.classList.add("active-button");
+  secondbtn.classList.remove("active-button");
+  thirdbtn.classList.remove("active-button");
   worker1.classList.add("active-worker");
   worker2.classList.remove("active-worker");
   worker2.classList.add("none");
@@ -55,6 +58,10 @@ function showFirst() {
 }
 function showSecond() {
   console.log("2");
+
+  firstbtn.classList.remove("active-button");
+  secondbtn.classList.add("active-button");
+  thirdbtn.classList.remove("active-button");
   worker1.classList.add("none");
   worker1.classList.remove("active-worker");
   worker2.classList.remove("none");
@@ -64,6 +71,10 @@ function showSecond() {
 }
 function showThird() {
   console.log("3");
+
+  firstbtn.classList.remove("active-button");
+  secondbtn.classList.remove("active-button");
+  thirdbtn.classList.add("active-button");
   worker1.classList.remove("active-worker");
   worker1.classList.add("none");
   worker2.classList.remove("active-worker");
@@ -81,15 +92,12 @@ function filterSelection(element) {
   let projects, i;
   projects = document.getElementsByClassName("project");
   if (element == "all") element = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
   for (i = 0; i < projects.length; i++) {
     filterRemoveClass(projects[i], "show-filter");
     if (projects[i].className.indexOf(element) > -1)
       filterAddClass(projects[i], "show-filter");
   }
 }
-
-// Show filtered elements
 function filterAddClass(element, name) {
   let i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -101,7 +109,6 @@ function filterAddClass(element, name) {
   }
 }
 
-// Hide elements that are not selected
 function filterRemoveClass(element, name) {
   let i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -114,7 +121,6 @@ function filterRemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-// Add active class to the current control button (highlight it)
 let btnContainer = document.getElementById("BtnContainer");
 let topic = document.getElementsByClassName("topic");
 for (let i = 0; i < topic.length; i++) {
@@ -159,14 +165,4 @@ function sendMessage(data) {
     .catch((error) => {
       console.error("Error:", error);
     });
-
-  // let request = new XMLHttpRequest();
-  // request.open("POST", "http://borjomi.loremipsum.ge/api/send-message");
-  // request.onloadend = function (data) {
-  //   if (data.status == 1) {
-  //     alert("Thank you for getting in touch! We appreciate you contacting us.");
-  //   }
-  // };
-
-  // request.send(message);
 }
