@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Jaapokki';
+    src: url('Jaapokki-Regular.eot');
+    src: url('Jaapokki-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Jaapokki-Regular.woff2') format('woff2'),
+        url('Jaapokki-Regular.woff') format('woff'),
+        url('Jaapokki-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

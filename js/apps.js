@@ -37,6 +37,44 @@ let myScrollFunc = function () {
   }
 };
 window.addEventListener("scroll", myScrollFunc);
+///////////////////////////////////////////////////////////////Recommendations
+let firstbtn = document.querySelector(".first");
+let secondbtn = document.querySelector(".second");
+let thirdbtn = document.querySelector(".third");
+let worker1 = document.querySelector(".worker1");
+let worker2 = document.querySelector(".worker2");
+let worker3 = document.querySelector(".worker3");
+
+function showFirst() {
+  console.log("1");
+  worker1.classList.add("active-worker");
+  worker2.classList.remove("active-worker");
+  worker2.classList.add("none");
+  worker3.classList.remove("active-worker");
+  worker3.classList.add("none");
+}
+function showSecond() {
+  console.log("2");
+  worker1.classList.add("none");
+  worker1.classList.remove("active-worker");
+  worker2.classList.remove("none");
+  worker2.classList.add("active-worker");
+  worker3.classList.remove("active-worker");
+  worker3.classList.add("none");
+}
+function showThird() {
+  console.log("3");
+  worker1.classList.remove("active-worker");
+  worker1.classList.add("none");
+  worker2.classList.remove("active-worker");
+  worker2.classList.add("none");
+  worker3.classList.remove("none");
+  worker3.classList.add("active-worker");
+}
+
+firstbtn.addEventListener("click", showFirst);
+secondbtn.addEventListener("click", showSecond);
+thirdbtn.addEventListener("click", showThird);
 ////////////////////////////////////////////////////////////////Latest projects
 filterSelection("all");
 function filterSelection(element) {
@@ -86,11 +124,49 @@ for (let i = 0; i < topic.length; i++) {
     this.className += " active";
   });
 }
-//ROSA Team
+///////////////////////////////////////////////////////////////ROSA Team
 let client = document.querySelector("client-example");
 function addClass() {
   client.classList.add("appear");
 }
 function removeClass() {
   client.classList.add("disappear");
+}
+//////////////////////////////////////////////////////////////Contact Us
+
+document.getElementById("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  sendMessage({
+    name: e.target.name.value,
+    email: e.target.email.value,
+    website: e.target.website.value,
+    message: e.target.message.value,
+  });
+});
+
+function sendMessage(data) {
+  fetch("http://borjomi.loremipsum.ge/api/send-message", {
+    method: "POST", // or 'PUT'
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((respData) => {
+      console.log(respData);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+
+  // let request = new XMLHttpRequest();
+  // request.open("POST", "http://borjomi.loremipsum.ge/api/send-message");
+  // request.onloadend = function (data) {
+  //   if (data.status == 1) {
+  //     alert("Thank you for getting in touch! We appreciate you contacting us.");
+  //   }
+  // };
+
+  // request.send(message);
 }
