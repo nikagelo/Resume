@@ -157,7 +157,7 @@ function sendMessage(data) {
       console.error("Error:", error);
     });
 }
-const modalEl = document.querySelector(".modal"),
+let modalEl = document.querySelector(".modal"),
   closeBtn = document.querySelector(".modal-close"),
   sendBtn = document.querySelector("#sendBtn"),
   userName = document.getElementById("#name"),
@@ -168,36 +168,36 @@ sendBtn.addEventListener("click", showModal);
 closeBtn.addEventListener("click", closeModal);
 
 function showModal() {
-  if (validateForm()) {
-    modalEl.classList.add("open");
-  }
+  // if (validateForm()) {
+  modalEl.classList.add("open");
+  // }
 }
 function closeModal() {
   modalEl.classList.remove("open");
 }
-function checkName() {
-  if (userName < 2) {
-    alert("Please enter your Name");
-  }
-}
-function checkEmail() {
-  if (userEmail < 8) {
-    alert("Please enter your Email");
-  }
-}
-function checkWebsite() {
-  if (userWebsite < 10) {
-    alert("Please enter your Website");
-  }
-}
-function checkMessage() {
-  if (userMessage < 20) {
-    alert("Your message must be atleast 20 symbols");
-  }
-}
-function validateForm() {
-  checkName();
-  checkEmail();
-  checkWebsite();
-  checkMessage();
-}
+// function checkName() {
+//   if (userName < 2) {
+//     alert("Please enter your Name");
+//   }
+// }
+// function checkEmail() {
+//   if (userEmail.length < 8) {
+//     alert("Please enter your Email");
+//   }
+// }
+// function checkWebsite() {
+//   if (userWebsite.length < 10) {
+//     alert("Please enter your Website");
+//   }
+// }
+// function checkMessage() {
+//   if (userMessage.length < 10) {
+//     alert("Your message must be atleast 10 symbols");
+//   }
+// }
+// function validateForm() {
+//   checkName();
+//   checkEmail();
+//   checkWebsite();
+//   checkMessage();
+// }

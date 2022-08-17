@@ -147,7 +147,7 @@
     display: block;
   }
   .article div p {
-    width: 400px;
+    width: 100%;
   }
   .leftDiv {
     margin-left: 0;
@@ -230,13 +230,14 @@
   }
   /* services styles  */
   .services {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     max-width: 460px;
     width: 100%;
     margin: 0 auto;
   }
   .services-wrapper {
     width: 220px;
+    margin: 0 auto;
   }
   /* recommendation styles */
   .recommendation {
@@ -257,6 +258,10 @@
     margin-left: 20px;
   }
   /* rosa teams styles */
+  .latestArticles h2,
+  .team-title h2 {
+    font-size: 55px;
+  }
   .marginNone {
     margin-left: 0px;
   }
@@ -277,6 +282,6 @@
   }
   /* footer styles  */
   .mediaText p {
-    width: 400px;
+    width: 100%;
   }
 }
