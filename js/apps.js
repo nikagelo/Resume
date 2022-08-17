@@ -17,10 +17,10 @@ function showSlides() {
   setTimeout(showSlides, 5000);
 }
 //////////////////////////////////////////////////////More about me Section Javascript
-htmlID = document.getElementById("htmlID");
-cssID = document.getElementById("cssID");
-responsiveID = document.getElementById("responsiveID");
-jsID = document.getElementById("jsID");
+let htmlID = document.getElementById("htmlID"),
+  cssID = document.getElementById("cssID"),
+  responsiveID = document.getElementById("responsiveID"),
+  jsID = document.getElementById("jsID");
 
 let myScrollFunc = function () {
   let y = window.scrollY;
@@ -121,7 +121,6 @@ function filterRemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-let btnContainer = document.getElementById("BtnContainer");
 let topic = document.getElementsByClassName("topic");
 for (let i = 0; i < topic.length; i++) {
   topic[i].addEventListener("click", function () {
@@ -129,14 +128,6 @@ for (let i = 0; i < topic.length; i++) {
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
-}
-///////////////////////////////////////////////////////////////ROSA Team
-let client = document.querySelector("client-example");
-function addClass() {
-  client.classList.add("appear");
-}
-function removeClass() {
-  client.classList.add("disappear");
 }
 //////////////////////////////////////////////////////////////Contact Us
 

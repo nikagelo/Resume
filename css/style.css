@@ -131,7 +131,7 @@
   font-family: "Muli";
 }
 .hireMe {
-  size: 15px;
+  font-size: 15px;
   padding: 13px 46.33px 17px 53.67px;
   border: none;
   text-transform: capitalize;
@@ -243,7 +243,7 @@
 .contactMe div div h5 {
   font-family: "Glacial Indifference-Bold";
 }
-.contactMe div div span {
+.contactMe div div a {
   font-family: "Muli";
 }
 .contactMe div div img {
@@ -256,7 +256,7 @@
   margin-bottom: 15px;
   color: #ffffff;
 }
-.contactMe span {
+.contactMe a {
   line-height: 26px;
   color: #dfdfdf;
 }
@@ -446,17 +446,49 @@
   justify-content: center;
 }
 .projectIconWrapper {
-  display: flex;
-  margin-top: 105px;
+  background-color: #000000;
+  opacity: 80%;
+  width: 300px;
+  height: 350px;
+  display: none;
+  padding-top: 105px;
   align-items: center;
   flex-direction: column;
+  cursor: pointer;
 }
-.projectsWrapper > :nth-child(2n) {
-  background-color: #555555;
+.project:hover .projectIconWrapper {
+  display: flex;
 }
 
-.projectsWrapper > :nth-child(2n + 1) {
-  background-color: #848484;
+.work_ideas {
+  background-image: url("../images/mona\ lisa.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mockup {
+  background-image: url("../images/appleHead.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.icons {
+  background-image: url("../images/earings.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.logos {
+  background-image: url("../images/scream.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.presentation {
+  background-image: url("../images/climt.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.psd_design {
+  background-image: url("../images/night.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .show-filter {
   display: block;
@@ -609,7 +641,7 @@
   display: flex;
   margin-left: 65px;
   margin-bottom: 195px;
-  transition-duration: 0.5;
+  transition-duration: 0.5s;
   transition-delay: 0.2s;
   cursor: pointer;
 }
