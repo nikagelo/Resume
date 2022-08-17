@@ -176,7 +176,7 @@ function closeModal() {
   modalEl.classList.remove("open");
 }
 // function checkName() {
-//   if (userName < 2) {
+//   if (userName.length < 2) {
 //     alert("Please enter your Name");
 //   }
 // }
